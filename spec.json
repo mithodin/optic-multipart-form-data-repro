@@ -9,6 +9,10 @@
       "description": "This one is fine"
     },
     {
+      "url": "http://example.com/a",
+      "description": "This one is fine, too"
+    },
+    {
       "url": "http://localhost:3000/a",
       "description": "This one breaks optic"
     }
