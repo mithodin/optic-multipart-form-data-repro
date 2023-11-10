@@ -1,0 +1,50 @@
+{
+  "info": {
+    "title": "Untitled service",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/a",
+      "description": "This one is fine"
+    },
+    {
+      "url": "http://localhost:3000/a",
+      "description": "This one breaks optic"
+    }
+  ],
+  "openapi": "3.1.0",
+  "paths": {
+    "/b": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetB200ResponseBody"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GetB200ResponseBody": {
+        "type": "object",
+        "properties": {
+          "hello": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "hello"
+        ]
+      }
+    }
+  }
+}

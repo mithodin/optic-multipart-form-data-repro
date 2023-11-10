@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "node test.js",
+    "optic:test": "optic capture spec.json"
+  },
+  "devDependencies": {
+    "@useoptic/optic": "^0.52.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
