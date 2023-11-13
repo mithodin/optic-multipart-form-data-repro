@@ -3,51 +3,28 @@
     "title": "Untitled service",
     "version": "1.0.0"
   },
-  "servers": [
-    {
-      "url": "/a",
-      "description": "This one is fine"
-    },
-    {
-      "url": "http://example.com/a",
-      "description": "This one is fine, too"
-    },
-    {
-      "url": "http://localhost:3000/a",
-      "description": "This one breaks optic"
-    }
-  ],
   "openapi": "3.1.0",
   "paths": {
-    "/b": {
-      "get": {
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "content": {
-              "application/json; charset=utf-8": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetB200ResponseBody"
+    "/u": {
+      "post": {
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
                 }
               }
             }
           }
-        }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "GetB200ResponseBody": {
-        "type": "object",
-        "properties": {
-          "hello": {
-            "type": "string"
-          }
         },
-        "required": [
-          "hello"
-        ]
+        "responses": {
+          "200": {}
+        }
       }
     }
   }

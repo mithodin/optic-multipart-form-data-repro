@@ -2,7 +2,7 @@ capture:
   spec.json:
     server:
       command: "npm run start"
-      url: http://localhost:3000/a
+      url: http://localhost:3000
     requests:
-      send:
-        - path: /b
+      run:
+        command: "curl http://localhost:8000/u -F file=@upload.txt -H 'Content-Type: multipart/form-data'"
